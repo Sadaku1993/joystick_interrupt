@@ -7,7 +7,6 @@ find_package(catkin REQUIRED COMPONENTS
 
 catkin_package(
 	CATKIN_DEPENDS roscpp sensor_msgs geometry_msgs topic_tools
-	DEPENDS system_lib
 )
 
 include(CheckCXXCompilerFlag)
