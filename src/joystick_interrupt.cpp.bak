@@ -84,8 +84,7 @@ public:
 	{
 		sub_joy = nh.subscribe("/joy", 1, &joystick_interrupt::cb_joy, this);
 		sub_twist = nh.subscribe("cmd_vel_input", 1, &joystick_interrupt::cb_twist, this);
-		// pub_twist = nh.advertise<geometry_msgs::Twist>("cmd_vel", 2);
-		pub_twist = nh.advertise<geometry_msgs::Twist>("/interrupt_cmd_vel", 2);
+		pub_twist = nh.advertise<geometry_msgs::Twist>("cmd_vel", 2);
 		pub_int = nh.advertise<std_msgs::Bool>("interrupt_status", 2);
 
 		nh.param("linear_vel", linear_vel, 0.5);

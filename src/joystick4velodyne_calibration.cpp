@@ -51,6 +51,7 @@ private:
 			cmd_vel.linear.y = cmd_vel.linear.z = 0.0;
 			cmd_vel.angular.z = ang * angular_vel;
 			cmd_vel.angular.x = cmd_vel.angular.y = 0.0;
+			cmd_vel.linear.x = 0.0; // for velodyne calibrataion
 			pub_twist.publish(cmd_vel);
 		}
 		else{
@@ -102,7 +103,7 @@ public:
 
 int main(int argc, char *argv[])
 {
-	ros::init(argc, argv, "joystick_interrupt");
+	ros::init(argc, argv, "joystick4velodyne_calibration");
 	
 	joystick_interrupt jy;
 	ros::spin();
