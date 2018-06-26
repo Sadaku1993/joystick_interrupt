@@ -39,6 +39,9 @@ target_link_libraries(mcnk_cheat_joy; ${catkin_LIBRARIES})
 add_executable(emergency_interrupt src/emergency_interrupt.cpp)
 target_link_libraries(emergency_interrupt; ${catkin_LIBRARIES})
 
+add_executable(joystick_interrupt_for_sensor_fusion src/joystick_interrupt_for_sensor_fusion.cpp)
+target_link_libraries(joystick_interrupt_for_sensor_fusion; ${catkin_LIBRARIES})
+
 install(TARGETS
     joystick_interrupt
     joystick_mux

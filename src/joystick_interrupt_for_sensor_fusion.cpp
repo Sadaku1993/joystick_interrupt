@@ -1,11 +1,21 @@
+/* joystick_interruption for sensor_fusion
+ *
+ * Subscribe
+ *      joy
+ *      twist
+ *      bool (stop for saving pointcloud)
+ * Publish
+ *      twist
+ *      int
+ *
+ * author
+ *      Yudai Sadakuni
+*/
+
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
 #include <sensor_msgs/Joy.h>
 #include <std_msgs/Bool.h>
-
-#include <message_filters/subscriber.h>
-#include <message_filters/synchronizer.h>
-#include <message_filters/sync_policies/approximate_time.h>
 
 class joystick_interrupt
 {
